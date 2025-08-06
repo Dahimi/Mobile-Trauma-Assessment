@@ -1,40 +1,17 @@
-import os
-import threading
-import time
-import subprocess
 import gradio as gr
 import json
+import time
 import random
 from datetime import datetime
+import os
 import uuid
 import requests
 from requests.exceptions import ConnectionError, RequestException
 from dotenv import load_dotenv
 from supabase import create_client, Client
+import threading
 from ollama import chat
 from pydantic import BaseModel
-
-# Ollama setup for Hugging Face hosting
-OLLAMA = os.path.expanduser("~/ollama")
-
-if not os.path.exists(OLLAMA):
-    subprocess.run("curl -L https://ollama.com/download/ollama-linux-amd64 -o ~/ollama", shell=True)
-    os.chmod(OLLAMA, 0o755)
-
-def ollama_service_thread():
-    subprocess.run("~/ollama serve", shell=True)
-
-OLLAMA_SERVICE_THREAD = threading.Thread(target=ollama_service_thread, daemon=True)
-OLLAMA_SERVICE_THREAD.start()
-
-print("Starting Ollama service...")
-time.sleep(10)
-
-# Pull the trauma assessment model
-model_name = "llm_hub/child_trauma_gemma"
-print(f"Pulling model: {model_name}")
-subprocess.run(f"~/ollama pull {model_name}", shell=True)
-print("Model ready!")
 
 # Load environment variables
 load_dotenv()
