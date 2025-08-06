@@ -1,4 +1,6 @@
 # 📱 Mobile Trauma Assessment Prototype
+![Mobile Trauma Assessment Interface](image.png)
+
 
 A mobile-friendly prototype application for trauma assessment of children affected by war and conflict zones. This Gradio-based interface serves as a proof-of-concept for our comprehensive child trauma assessment platform while the native mobile application is under development.
 
