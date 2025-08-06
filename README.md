@@ -135,15 +135,6 @@ This is a **prototype application** serving as:
 
 **The production mobile application is currently under development**
 
-## 🤝 Integration with Care Bridge Platform
-
-This mobile prototype seamlessly integrates with our Care Bridge web platform, enabling:
-- **Professional review** of AI-generated assessments
-- **Specialist feedback** and recommendations
-- **Care coordination** between multiple providers
-- **Longitudinal tracking** of child progress
-- **Crisis intervention** alerts when needed
-
 ## ⚖️ Disclaimer
 
 This prototype is designed for **screening and initial assessment purposes only**. It does not replace professional mental health evaluation or emergency intervention services. In case of immediate safety concerns, contact local emergency services immediately.
